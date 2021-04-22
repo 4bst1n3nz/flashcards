@@ -7,7 +7,7 @@ const topicsSlice = createSlice({
     },
     reducers: {
         addTopic(state, action) {
-            state.topics.topics[action.payload.id] = {
+            state.topics[action.payload.id] = {
                 id: action.payload.id,
                 name: action.payload.name,
                 icon: action.payload.icon,
