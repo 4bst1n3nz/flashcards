@@ -23,7 +23,6 @@ export default function NewQuizForm() {
     const cardIds = [];
 
     // create the new cards here and add each card's id to cardIds
-    // create the new quiz here
     dispatch(addQuizThunk({
       id: uuidv4(),
       name: name,

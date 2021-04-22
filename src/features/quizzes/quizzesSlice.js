@@ -8,7 +8,6 @@ const quizzesSlice = createSlice({
     },
     reducers: {
         addQuiz(state, action) {
-            console.log(action.payload);
             state.quizzes[action.payload.id] = {
                 id: action.payload.id,
                 name: action.payload.name,
@@ -25,7 +24,6 @@ export const addQuizThunk = (payload) => {
     return (dispatch) => {
         dispatch(addQuiz(payload));
         dispatch(addQuizToTopic(payload));
-        // console.log(payload);
     };
 };
 
