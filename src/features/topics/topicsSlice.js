@@ -12,12 +12,15 @@ const topicsSlice = createSlice({
                 name: action.payload.name,
                 icon: action.payload.icon,
                 quizIds: []
-            };
+            }
+        },
+        addQuizToTopic(state, action) {
+            state.topics[action.payload.topicId].quizIds.push(action.payload.quizId);
         }
     }
 });
 
-export const { addTopic } = topicsSlice.actions;
+export const { addTopic, addQuizToTopic } = topicsSlice.actions;
 export default topicsSlice.reducer;
 
 // SELECTORS
