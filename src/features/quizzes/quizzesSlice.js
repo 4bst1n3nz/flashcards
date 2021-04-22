@@ -12,7 +12,7 @@ const quizzesSlice = createSlice({
                 id: action.payload.id,
                 name: action.payload.name,
                 topicId: action.payload.topicId,
-                cardIds: []
+                cardIds: action.payload.cardIds
             };
         }
     }
